@@ -1,0 +1,25 @@
+# Local environment files
+*.env
+
+# Logs
+logs/*
+
+# Dependency directories
+node_modules/
+
+# Build output
+dist/
+
+# IDE files
+.idea/
+*.iml
+
+# Project specific
+coverage/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Distribution files
+*.js.map
