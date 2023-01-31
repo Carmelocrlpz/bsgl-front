@@ -1,0 +1,43 @@
+.custom-font-size-1 {
+  color: #81d742;
+}
+
+.text-12 {
+  color: #ffffff;
+}
+
+.logo-container {
+  backdrop-filter: blur(10px);
+  position: absolute;
+  padding: 5px;
+}
+
+.robot {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.sparks {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  display: flex;
+}
+
+.sparks span {
+  width: 6px;
+  height: 6px;
+  background-color: yellow;
+  border-radius: 50%;
+  animation: spark 1s ease-in-out infinite;
+}
+
+@keyframes spark {
+  0% {
+    transform: translate(-50%, 50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
