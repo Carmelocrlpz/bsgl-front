@@ -1,9 +1,10 @@
 .custom-font-size-1 {
-  color: #81d742;
+  /* color: #81d742; */
+  color: #000000
 }
 
 .text-12 {
-  color: #ffffff;
+  color: #000000;
 }
 
 .logo-container {
@@ -40,4 +41,8 @@
   100% {
     transform: translate(-50%, -50%) rotate(360deg);
   }
+}
+
+.secondary-container {
+  background-color: #959d3a;
 }
