@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+    background-image: linear-gradient(#959f3e, #959f3e);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .7s;
+    color: #879ea1;
+}
+a:hover {
+    color: #959f3e;
+    background-size: 100% 2px;
+
+}
+
+li {
+    line-height: 24px;
+}
+
+ ul > li {
+        height: 100%;
+        align-self: stretch;
+        margin-left: 2px;
+    }
+
