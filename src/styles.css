@@ -1,4 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+*{
+-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
 a {
   color: inherit;
   font-family: 'Open Sans', sans-serif;
@@ -21,6 +28,8 @@ a {
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
 }
+
+
 
 
 /* Line Height */
@@ -66,4 +75,14 @@ a {
 
 .line-height-9 {
 	line-height: 1.9 !important;
+}
+
+
+section[id]{
+	scroll-margin-top: 250px;
+
+}
+
+html{
+	scroll-behavior: smooth;
 }
