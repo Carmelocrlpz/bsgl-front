@@ -174,7 +174,8 @@ h2 {
 
 .back {
   background-color: #ffffff;
-  color: #889da3;
+  /* color: #889da3; */
+  color: #49443E;
   text-align: center;
   padding: 10px;
 }
@@ -200,11 +201,13 @@ h2 {
 }
 
 .lggrey {
-  background: linear-gradient(#889da3, white);
+  /* background: linear-gradient(#889da3, white); */
+  background-color: #f4f4f4;
 }
 
 .lgorange {
-  background: linear-gradient(white, #959d3a);
+  /* background: linear-gradient(white, #959d3a); */
+  background-color: #eceddc;
 }
 
 .pdgb-50 {
@@ -219,4 +222,10 @@ h2 {
 /**CR Styles**/
 .robot-gif {
   float: right;
+}
+
+.subcategory {
+  height: 50px;
+  width: 50px;
+  margin: 1%;
 }
