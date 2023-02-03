@@ -5,7 +5,7 @@ a {
     background-repeat: no-repeat;
     background-size: 0% 2px;
     transition: background-size .7s;
-    
+
 }
 a:hover {
     color:#959f3e;
@@ -36,9 +36,9 @@ li {
 .navbar-light .navbar-nav .nav-link:hover {
    color:#959f3e;
     background-size: 100% 2px;
-  
-    
 }
 
-
-
+.nav-top {
+  padding-left: 5%;
+  padding-right: 5%;
+}

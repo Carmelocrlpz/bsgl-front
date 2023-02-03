@@ -22,19 +22,19 @@
   background-color: #959d3a;
 }
 
-.margin-top-50{
+.margin-top-50 {
   margin-top: 50px;
 }
 
-.margin-top-10{
+.margin-top-10 {
   margin-top: 10px;
 }
 
-.margin-bottom-50{
+.margin-bottom-50 {
   margin-bottom: 50px;
 }
 
-.margin-bottom-10{
+.margin-bottom-10 {
   margin-bottom: 10px;
 }
 
@@ -48,9 +48,7 @@ h1 {
   font-family: 'Alata', sans-serif;
 }
 
-section {
- 
-}
+section {}
 
 h1 {
   display: block;
@@ -67,13 +65,13 @@ h2 {
   grid-template-columns: repeat(5, 1fr);
   grid-template-rows: repeat(5, 1fr);
   grid-column-gap: 0px;
-  grid-row-gap: 0px; 
+  grid-row-gap: 0px;
   opacity: 1;
   transform: translate(0, 0);
   transition: all 1s;
 }
 
-.content > div {
+.content>div {
   margin: 0 auto;
   background-color: #fff;
   width: 50%;
@@ -81,9 +79,8 @@ h2 {
   grid-area: 2 / 2 / 5 / 5;
 }
 
-
 .fadeTop {
-  opacity: 0; 
+  opacity: 0;
   transform: translate(0, 10vh);
   transition: all 1s;
 }
@@ -118,128 +115,108 @@ h2 {
   transition: all 2s;
 }
 
-
-
 .fadeAppear {
   opacity: 0;
   transform: scale(0.5, 2);
- /* transform: translate(-10vh, 0vh);*/
-  transition: all 2s;  
+  /* transform: translate(-10vh, 0vh);*/
+  transition: all 2s;
 }
 
-.fadeRotate{
-    opacity: 0;
+.fadeRotate {
+  opacity: 0;
   transform: rotate(180deg);
- /* transform: translate(-10vh, 0vh);*/
+  /* transform: translate(-10vh, 0vh);*/
   transition: all 1s;
 }
-
 
 @keyframes rotation {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
 }
-
 
 .visible {
   opacity: 1;
   transform: translate(0, 0);
 }
 
-.txt-center{
+.txt-center {
   text-align: center;
 }
 
-.txt-color-withe{
+.txt-color-withe {
   color: #ffffff;
 }
 
-
-
-
 /*******************************tarjetass*************************************************/
-.tarjetas{
-            /*position: relative;*/
-            width: 100%;
-            height: 100%;
-            display: grid;
-            place-items: center;            
-            
-            color: white;
-           
-         
-            
-            
-        }
-
-        .contenedor{
-          border: none;
-        }
-        .front{
-            background: #ffffff;           
-            color: #889da3;
-            padding: 10px;
-
-
-        }
-        .back{
-         background-color: #ffffff;
-         color: #889da3;
-          text-align:center;
-          padding: 10px;
-          
-        }
-
-        .contenedor:hover > .front{
-            transform: rotateY(360deg);
-            transition: all 2s;
-        }
-        .contenedor:hover > .back{
-            transform: rotateY(360deg);
-            transition: all 2s;
-        }
-        
-/**************************************************************************************/
-
-
-
-
-#inicio{
-  background-image: url('../../assets/img/JPG/robot-2.jpeg');
-
-  
-
-/* Create a parallax effect */
-
-background-attachment: fixed;
-
-background-position: center;
-
-background-repeat: no-repeat;
-
-background-size: cover; 
-
-
+.tarjetas {
+  /*position: relative;*/
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  color: white;
 }
 
+.contenedor {
+  border: none;
+}
 
+.front {
+  background: #ffffff;
+  color: #889da3;
+  padding: 10px;
+}
 
-.lggrey{
+.back {
+  background-color: #ffffff;
+  color: #889da3;
+  text-align: center;
+  padding: 10px;
+}
+
+.contenedor:hover>.front {
+  transform: rotateY(360deg);
+  transition: all 2s;
+}
+
+.contenedor:hover>.back {
+  transform: rotateY(360deg);
+  transition: all 2s;
+}
+
+/**************************************************************************************/
+#inicio {
+  background-image: url('../../assets/img/JPG/robot-2.jpeg');
+  /* Create a parallax effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.lggrey {
   background: linear-gradient(#889da3, white);
 }
 
-.lgorange{
+.lgorange {
   background: linear-gradient(white, #959d3a);
 }
 
-
-.pdgb-50{
+.pdgb-50 {
   padding-bottom: 80px;
 }
+
 .pdgt-50 {
   padding-top: 80px;
+}
+
+
+/**CR Styles**/
+.robot-gif {
+  float: right;
 }
