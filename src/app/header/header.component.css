@@ -42,3 +42,12 @@ li {
   padding-left: 5%;
   padding-right: 5%;
 }
+
+
+.navbar-brand>img {
+    width: 180px;
+}
+.navbar-main .active {
+    text-decoration: underline;
+    text-underline-offset: 9px;
+}

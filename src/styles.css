@@ -7,8 +7,6 @@
 body,
 html,
 h1 {
-    margin: 0;
-    padding: 0;
     font-family: 'Alata', sans-serif;
 }
 h1 {
@@ -19,25 +17,13 @@ h1 {
 h2 {
     text-align: center;
 }
-#inicio {
-    background-image: url('assets/img/JPG/robot-2.jpeg');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+
 a, p {
     color: inherit;
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
 }
-.navbar-brand>img {
-    width: 180px;
-}
-.navbar-main .active {
-    text-decoration: underline;
-    text-underline-offset: 9px;
-}
+
 .font-primary {
     font-family: 'Open Sans', sans-serif;
 }
@@ -164,37 +150,7 @@ transform: translate(0, 0);
   color: #ffffff;
 }
 /*******************************tarjetass*************************************************/
-.tarjetas {
-/*position: relative;*/
-width: 100%;
-height: 100%;
-display: grid;
-place-items: center;
-color: white;
-}
-.contenedor {
-  border: none;
-}
-.front {
-  background: #ffffff;
-color: #889da3;
-padding: 10px;
-}
-.back {
-  background-color: #ffffff;
-/* color: #889da3; */
-color: #49443E;
-text-align: center;
-padding: 10px;
-}
-.contenedor:hover>.front {
-  transform: rotateY(360deg);
-transition: all 2s;
-}
-.contenedor:hover>.back {
-  transform: rotateY(360deg);
-transition: all 2s;
-}
+
 /******************************colores de fondo ********************************************************/
 
 .lggrey {
@@ -227,3 +183,49 @@ transition: all 2s;
   margin: 1%;
 }
 /************************************************************************************************************************************************************************/
+
+ .box {
+          background-color: transparent;
+          width: 80%;
+          right: 10%;
+          left: 5%;
+          height: 300px;
+          border: none;
+          margin: 20px;
+          
+        }
+        .box-inner {
+          position: relative;
+          width: 100%;
+          min-height: 100%;
+          text-align: center;
+          transition: transform 0.5s;
+          transform-style: preserve-3d;
+          padding: 10px;
+        }
+        .box:hover .box-inner {
+          transform: rotateY(180deg);
+        }
+        .box-front,
+        .box-back {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          backface-visibility: hidden;
+          padding: 20px;
+          text-align: center;
+        }
+        .box-front {
+          background-color: #ffffff;
+          color: #111111;
+        }
+        .box-back {
+          background-color: #869f9f;
+          color: #eeeeee;
+          transform: rotateY(180deg);
+          text-align: center;
+          width: 100%;
+          right: 0%;
+          left: -5%;
+          height: 300px;
+        }
