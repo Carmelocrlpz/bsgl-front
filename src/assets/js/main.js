@@ -55,6 +55,18 @@ $( document ).ready(function() {
 
 
 
+
+
+
+
+ 
+
+
+
+
+
+
+
 });
 
 
@@ -105,6 +117,7 @@ function maquina(contenedor,texto,intervalo){
 
 function escribirEnPantalla(texto){
   let arr=texto.split("");
+  
   i=0;
  let intervalo= setInterval(function(){
     if(i==arr.length-1){ 
@@ -125,3 +138,14 @@ function escribirEnPantalla(texto){
 
 escribirEnPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
 
+
+    var inputs = document.getElementsByClassName('formulario__input');
+    for (var i = 0; i < inputs.length; i++) {
+      inputs[i].addEventListener('keyup', function(){
+        if(this.value.length>=1) {
+          this.nextElementSibling.classList.add('fijar');
+        } else {
+          this.nextElementSibling.classList.remove('fijar');
+        }
+      });
+    }
