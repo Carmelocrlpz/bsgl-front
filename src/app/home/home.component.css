@@ -40,43 +40,9 @@
 
 
 #inicio {
-    /*background-image: url('../../assets/GIF/robot.gif');
-    background-attachment: fixed;
-    background-position: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;*/
     height: 90vh;
     overflow: hidden;
 }
-
-
-/*.slogan {
-  width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  font-size: 2rem;
-  margin: 0 auto;
-   font-family: 'Open Sans', sans-serif;
-  border-right: 0.15em solid #18bdec;
-  animation: typing 4s steps(38) 1s 1 normal both, blink 1s steps(1) infinite;
-
-}
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-}
-
-https://coherix.com/wp-content/uploads/2022/11/Coherix-Homepage-v3.webm
-*/
 
 /*ADAI*/
 .slogan-container{
@@ -85,7 +51,11 @@ width: 80%;
 height: auto;
 top: 40%;
 left: 10%;
-
+backdrop-filter: blur(20px);
 }
 
 #slogan{color: white;}
+
+.gif-container {
+  opacity: 0.9px;
+}
