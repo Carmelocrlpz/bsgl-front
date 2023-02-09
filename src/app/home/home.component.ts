@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,13 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 
-export class HomeComponent implements OnInit {
-public video = "";
+export class HomeComponent implements OnInit, AfterViewInit  {
+  @ViewChild('elementId') elementRef!: ElementRef;
+  public video = "";
 
-constructor() { }
+  constructor(){}
 
-ngOnInit(){
-  this.video = "assets/video/robotic2.mp4"
-}
+  ngOnInit(){}
+
+  ngAfterViewInit() {
+    console.log(this.elementRef);
+  }
 
 }
