@@ -59,3 +59,12 @@ backdrop-filter: blur(20px);
 .gif-container {
   opacity: 0.9px;
 }
+/*********************comentar para quitar el div transparente negro************************************************/
+.gif-container {
+    background-position: center center;
+    transform: translateZ(-0.5px) scale(2);
+    background-size: cover;
+    z-index: -1;
+    height: 75vh;
+    background-image: url('https://bsgl.mx/img/gif/bsgl.gif');
+}

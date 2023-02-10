@@ -1,0 +1,40 @@
+/* descomentar para hacer hover
+.infor{
+  
+  
+  opacity: 0;
+  transition: 1.5s ease;
+ 
+}
+
+.texton{
+  text-align: center;
+}
+
+.card-body:hover .infor{
+  opacity: 1;
+}
+*/
+
+
+.fadeAppear3 {
+  opacity: 0;
+  transform: scale(0.5, 2);
+  transition: all 2s;
+}
+
+.imgcb{
+  width: 100%;
+  height: auto;
+  color: #959f3e !important;
+}
+
+.card{
+  margin-left: 2%;
+}
+
+
+.imgcb{
+    /*filter: invert(48%) sepia(79%) saturate(2476%) hue-rotate(86deg) brightness(118%) contrast(119%);*/
+fill: black !important;    
+}

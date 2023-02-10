@@ -12,6 +12,7 @@ import { EspecialidadesComponent } from './especialidades/especialidades.compone
 import { ServiciosComponent } from './servicios/servicios.component';
 import { ConsultoriaComponent } from './consultoria/consultoria.component';
 import { ContactoComponent } from './contacto/contacto.component';
+import { NosotrosComponent } from './nosotros/nosotros.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactoComponent } from './contacto/contacto.component';
     EspecialidadesComponent,
     ServiciosComponent,
     ConsultoriaComponent,
-    ContactoComponent
+    ContactoComponent,
+    NosotrosComponent
   ],
   imports: [
     BrowserModule,
