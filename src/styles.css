@@ -20,7 +20,7 @@ h2 {
     text-align: center;
 }
 
-a, p {
+a, p, label {
     color: inherit;
     font-family: 'Open Sans', sans-serif;
     text-align: justify;
@@ -128,7 +128,7 @@ html {
 .fadeRotate {
   opacity: 0;
   transform: rotate(180deg);
-  
+
   transition: all 1s;
 }
 @keyframes rotation {
@@ -197,11 +197,11 @@ transform: translate(0, 0);
           margin-right: 0;
           height: 400px;
           border: none;
-          
+
           margin-bottom: 20px;
 
 
-          
+
         }
         .box-inner {
           position: relative;
@@ -221,7 +221,7 @@ transform: translate(0, 0);
           min-height: 400px;
           backface-visibility: hidden;
           padding: 40px ;
-          
+
         }
         .box-front {
           background-image: linear-gradient(to right, #eae1ef 10%, #eadbd7 250%);
@@ -237,7 +237,7 @@ transform: translate(0, 0);
          /* #889da3
 #959d3a*/
 
-         
+
           transform: rotateY(180deg);
           text-align: justify-all;
           width: 100%;
@@ -245,30 +245,30 @@ transform: translate(0, 0);
           width: 100%;
           height: 400px;
           box-shadow: 60px 0px 0px 0px #eae1ef;
-          align-items: center; 
-           display: flex; 
+          align-items: center;
+           display: flex;
            justify-content: center;
            margin: auto;
            flex-direction: column;
         }
 
        /*  @media screen (min-width: 768px) {
-           
-         
-        }
-         
-        @media screen (min-width: 1024px) {
-          
 
-        
-           
+
+        }
+
+        @media screen (min-width: 1024px) {
+
+
+
+
         }*/
 
         /* Cuando la pantalla es mayor a 900px */
 @media only screen and (min-width : 901px) {
   section[id]{
     scroll-margin-top:90px;
-    
+
   }
   .img-res{
     position: relative;

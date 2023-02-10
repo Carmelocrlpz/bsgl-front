@@ -1,36 +1,37 @@
-<section class="container-fluid pdgb-50  " id="contacto" >
-    <div class="container">
-        <h3 class="scroll-content fadeAppear txt-center text-dark"><img class="subcategory" src="assets/img/PNG/small-logo2.png" alt="">CONTACTO</h3>
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8">
-                <div class="formulario-container">
-                    <form action="" class="formulario">
-                        
-                      <h1 class="formulario__titulo scroll-content fadeRight">Contáctenos</h1>
-                      <hr><br>
-                      <input type="text" class="formulario__input scroll-content fadeRight">
-                      <label for="" class="formulario__label scroll-content fadeRight">Nombre</label>
-                      <input type="text" class="formulario__input scroll-content fadeRight">
-                      <label for="" class="formulario__label scroll-content fadeRight">Correo electrónico</label>
-                      <input type="text" class="formulario__input scroll-content fadeRight">
-                      <label for="" class="formulario__label scroll-content fadeRight">Teléfono</label>
-                      
-                      <select class="form-control scroll-content fadeRight">
-                        <option>Selecciona</option>
-                      </select>
-                      <br>
-
-                      <input type="text" class="formulario__input scroll-content fadeRight">
-                      <label for="" class="formulario__label scroll-content fadeRight">Mensaje</label>
-
-                      <input type="submit" class="formulario__submit scroll-content fadeRight">
-
-                    </form>
-                </div>
-            </div>
-
-            <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-            </div>
+<section class="container-fluid pdgb-50 contact-section" id="contacto">
+  <div class="container">
+    <div class="row">
+      <div class="container mt-5">
+        <h2 class="text-center">Contáctanos</h2><br>
+        <div class="row ">
+          <div class="col-md-6">
+            <form [formGroup]="contactForm">
+              <div class="form-group">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" id="name" formControlName="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+              </div>
+              <div class="form-group">
+                <label for="email">Télefono</label>
+                <input type="email" class="form-control" id="email" formControlName="email">
+              </div>
+              <div class="form-group">
+                <label for="message">Mensaje</label>
+                <textarea class="form-control" id="message" rows="3" formControlName="message"></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary" [disabled]="!contactForm.valid">Enviar</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-6">
+            <img src="assets/img/SVG/Contact-us.svg" alt="contactanos" width="100%" height="100%">
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
