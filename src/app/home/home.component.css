@@ -1,88 +1,82 @@
-.custom-font-size-1 {
-  color: #000000
-}
+    /**********************video**********************************************/
 
-.text-12 {
-  color: #000000;
-}
+    .divheader {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      width: 100%;
+      margin:0;
+      padding: 0;
+    }
 
-.logo-container {
-  backdrop-filter: blur(10px);
-  position: absolute;
-  padding: 5px;
-}
+    .content {
+      width: 100%;
+      margin:0;
+      padding: 0;
+      
+      text-align: center;
+    }
 
-.robot {
-  width: 200px;
-  height: 200px;
-  position: relative;
-}
+    .divheader-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow: hidden;
+    }
 
-.secondary-container {
-  background-color: #959d3a;
-}
+    .divheader-video video {
+      min-width: 100%;
+      min-height: 100%;
+    }
 
-.margin-top-50 {
-  margin-top: 50px;
-}
+    .divheader-overlay {
+      height: 100vh;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: #889da3;
+      z-index: 1;
+      opacity: .85;
+    }
 
-.margin-top-10 {
-  margin-top: 10px;
-}
+    .divheader-content {
+      position: absolute;
+      width: 60%;
+      height: auto;
+      left: 20%;
+      top: 40%;
+      
+      z-index: 2;
+    }
 
-.margin-bottom-50 {
-  margin-bottom: 50px;
-}
+    .divheader-content h1 {
+      font-size: 50px;
+      margin-bottom: 0;
+      font-family: 'Lobster', cursive;
+    }
 
-.margin-bottom-10 {
-  margin-bottom: 10px;
-}
+    .divheader-content p {
+      font-size: 1.5rem;
+      display: block;
+      padding-bottom: 2rem;
+    }
 
-#inicio {
-  height: 90vh;
-  overflow: hidden;
-}
+    .btn {
+      background: #c44569;
+      color: #fff;
+      font-size: 1.2rem;
+      padding: 1rem 2rem;
+      text-decoration: none;
+    }
 
-/*ADAI*/
-.slogan-container {
-  position: absolute;
-  width: 80%;
-  height: auto;
-  top: 40%;
-  left: 10%;
-  backdrop-filter: blur(20px);
-}
-
-#slogan {
-  color: white;
-}
-
-.gif-container {
-  opacity: 0.9px;
-}
-
-/*********************comentar para quitar el div transparente negro************************************************/
-.gif-container {
-  background-position: center center;
-  transform: translateZ(-0.5px) scale(2);
-  background-size: cover;
-  z-index: -1;
-  height: 75vh;
-  background-image: url('https://bsgl.mx/img/gif/bsgl.gif');
-}
-
-.home-container {
-  position: absolute;
-  width: 100%;
-  height: 102vh;
-  background-color: rgba(0, 0, 0, .50);
-  top: 0;
-  left: 0;
-  z-index: 5;
-  margin-bottom: 0px;
-}
-
-.home-section {
-  height: 78.5vh;
-  padding-top: 18%;
-}
+    @media (max-width: 960px) {
+      .content {
+        padding: 0 3rem 0 3rem;
+      }
+    }
+    /**********************END video**********************************************/

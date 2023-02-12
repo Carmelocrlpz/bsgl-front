@@ -1,21 +1,10 @@
-<!--<section class="" id="inicio">
-  <div #elementId class="gif-container">
-    <img src="https://bsgl.mx/img/gif/bsgl.gif" alt="bsgl technology" width="100%" height="100%">
-  </div>
-  <div class="container-fluid" style="height: 75vh; padding-top: 18%;">
-    <div class="slogan-container" style="">
-      <h1 id="slogan"></h1>
+  <div class="divheader content container-fluid">
+    <div class="divheader-video">
+      <video src="assets/img/video/mw.mp4" autoplay="" loop="" muted="" playsinline="" #video (canplay)="video.play()"
+    (loadedmetadata)="video.muted = true"></video>
+    </div>
+    <div class="divheader-overlay"></div>
+    <div class="divheader-content">
+      <h4 #slogan id="slogan"></h4>
     </div>
   </div>
-</section>
--->
-
-
-<section class="home-section" id="inicio">
-  <div class="home-container"></div>
-
-  <div #elementId class="gif-container"></div>
-  <div class="slogan-container" style=" position: absolute; z-index: 6;">
-      <h1 id="slogan"></h1>
-  </div>
-</section>
