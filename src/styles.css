@@ -70,6 +70,10 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
 }
 
+.contact-section, .service-section  {
+  background-color: #f4f4f4;
+}
+
 /* Line Height */
 .line-height-initial {
   line-height: initial !important;
