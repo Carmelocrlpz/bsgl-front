@@ -7,46 +7,59 @@ import { Component, ElementRef, OnInit, Renderer2, ViewChild  } from '@angular/c
 })
 
 export class HomeComponent implements OnInit {
- 
- @ViewChild('slogan') slogan!: ElementRef;
- public writing!:any;
+  public writing!:any;
+  public myTimeout!:any;
 
- 
-
-   constructor( private renderer2: Renderer2){
-
-   }
+  @ViewChild('slogan') slogan!: ElementRef;
+  
+  constructor( private renderer2: Renderer2){ }
 
   ngOnInit(){}
 
-  ngAfterViewInit() {
-
-    //this.renderer.setProperty(element, 'innerHTML', newContent); 
-    /*this.writing = str => { 
-      arrFromStr = str.split('');
-      let i = 0;
-      let slogan = document.getElementById('slogan');
-
-      let printStr = setInterval(function(){ 
-        slogan.innerHTML += arrFromStr[i];
-        i++;
-        if (i === arrFromStr.length){
-        clearInterval(printStr);
-        }
-      },100);
-    };*/
-    
+  ngAfterViewInit() 
+  {
+    this.escribirPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
+    setInterval(() => this.validar(), 8000);
   }
 
-
-  escribirPantalla(slo:string){
+  escribirPantalla(slo:string)
+  {    
     let arraySlo = slo.split('');
     let i=0;
     let elemntSlogan = this.slogan.nativeElement;
     let printStr = setInterval(function(){
-      
-    },100);
+      //this.renderer2.setProperty(this.slogan, 'innerHTML', arraySlo[i]); 
+      elemntSlogan.innerHTML += arraySlo[i];
+              i++;
+      if (i === arraySlo.length){
+        clearInterval(printStr);
+        i=0;
+      }
+    },100);  
   }
+
+/********************BUCLE slogan****************************************/
+  myStopFunction() { clearTimeout(this.myTimeout); }
+
+  validar()
+  { 
+    let mielemento = this.slogan.nativeElement.innerHTML;
+      if(!mielemento){ 
+        this.escribirPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
+        this.myStopFunction(); 
+        this.myTimeout = setTimeout(() => this.repeticion(), 7800);
+      }else{
+           this.slogan.nativeElement.innerHTML = "";
+      } 
+  }
+   
+  repeticion() 
+  { 
+    setTimeout(() => this.validar(), 200);
+  }
+/************************************************************/
+
+  
 
   
 

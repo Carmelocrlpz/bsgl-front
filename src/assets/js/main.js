@@ -15,8 +15,8 @@ window.addEventListener('scroll', function()  {
 });
 
 $( document ).ready(function() {
-    $("#secondary-container").addClass( "visible" );
-    $("#container-video").addClass( "visible" );
+
+
 
     $(window).scroll(function(){
         var barra = $(window).scrollTop();
@@ -30,6 +30,7 @@ $( document ).ready(function() {
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
+
 $('.carousel').carousel({
   interval: 3000
 
@@ -40,7 +41,8 @@ $('.carousel').carousel({
 });
 
 
-
+/*
+THIS WAS MIGRATED TO COMPONENT:TS
 function escribirEnPantalla(texto){
   let arr=texto.split("");
   
@@ -65,7 +67,7 @@ function escribirEnPantalla(texto){
 escribirEnPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
 
 
-   
+   */
 
 
 /************************************************************************************************/
