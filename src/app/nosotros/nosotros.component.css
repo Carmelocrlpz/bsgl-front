@@ -1,4 +1,4 @@
-    /***************************carousel css*****************************************/
+    /***************************carousel css***************************************
     .carousel-control-prev-icon,
     .carousel-control-next-icon {
       height: 100px;
@@ -51,5 +51,72 @@
         transition: opacity .3s ease;
     }
     /*************************ENDcarousel css*******************************************/
+
+
+
+    .gallery{
+      margin: 4% auto;
+      width: 140px;
+      height: 140px;
+      position: relative;
+      perspective: 1000px;
+    }
+    #carousel{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      transform-style: preserve-3d;
+      animation: rotation 40s  infinite linear;
+    }
+    #carousel:hover{
+      animation-play-state: paused;
+    }
+    #carousel figure{
+      display: block;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+      height: 78%;
+      left: 0px;
+      top: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      overflow: hidden;
+      border: solid 1px black;
+    }
+    #carousel figure:nth-child(1){transform: rotateY(27.69deg) translateZ(288px);}
+    #carousel figure:nth-child(2) { transform: rotateY(55.38deg) translateZ(288px);}
+    #carousel figure:nth-child(3) { transform: rotateY(83.07deg) translateZ(288px);}
+    #carousel figure:nth-child(4) { transform: rotateY(110.76deg) translateZ(288px);}
+    #carousel figure:nth-child(5) { transform: rotateY(138.45deg) translateZ(288px);}
+    #carousel figure:nth-child(6) { transform: rotateY(166.14deg) translateZ(288px);}
+    #carousel figure:nth-child(7) { transform: rotateY(193.83deg) translateZ(288px);}
+    #carousel figure:nth-child(8) { transform: rotateY(221.52deg) translateZ(288px);}
+    #carousel figure:nth-child(9) { transform: rotateY(249.21deg) translateZ(288px);}
+    #carousel figure:nth-child(10) { transform: rotateY(276.9deg) translateZ(288px);}
+    #carousel figure:nth-child(11) { transform: rotateY(304.59deg) translateZ(288px);}
+    #carousel figure:nth-child(12) { transform: rotateY(332.28deg) translateZ(288px);}
+    #carousel figure:nth-child(13) { transform: rotateY(360deg) translateZ(288px);}
+
+    #carousel img{
+      -webkit-filter: grayscale(1);
+      cursor: pointer;
+      transition: all .5s ease;
+      width:20%;
+      height: 20%;
+      left:40%;
+    }
+    #carousel img:hover{
+      -webkit-filter: grayscale(0);
+        transform: scale(1.2,1.2);
+    }
+
+    @keyframes rotation{
+      from{
+        transform: rotateY(0deg);
+      }
+      to{
+        transform: rotateY(360deg);
+      }
+    }
 
 
