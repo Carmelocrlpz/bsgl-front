@@ -1,44 +1,55 @@
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
- 
-  outline: black;
-  background-size: 100%, 100%;
-  border-radius: 50%;
-  
-  background-image: none;
-}
+    /***************************carousel css*****************************************/
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+      height: 100px;
+      width: 100px;
+      outline: black;
+      background-size: 100%, 100%;
+      border-radius: 50%;
+      border:none;
+      background-image: none;
+    }
 
-.carousel-control-next-icon:after
-{
-  content: '>';
-  font-size: 55px;
-  color: red;
-}
+    .carousel-control-next,.carousel-control-prev{
+      border: none;
+      background-color: transparent;
+    }
+    .carousel-control-next:hover,.carousel-control-prev:hover{
+      border: none;
+      background-color: transparent;
+    }
 
-.carousel-control-prev-icon:after {
-  content: '<';
-  font-size: 55px;
-  color: #959d3a;
-}
+    .carousel-control-next-icon:after
+    {
+      content: '>';
+      font-size: 55px;
+      color: red;
+    }
+
+    .carousel-control-prev-icon:after {
+      content: '<';
+      font-size: 55px;
+      color: #959d3a;
+    }
 
 
-.carousel-indicators li {
-    box-sizing: content-box;
-    -ms-flex: 0 1 auto;
-    flex: 0 1 auto;
-    width: 30px;
-    height: 3px;
-    margin-right: 3px;
-    margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color:  #959d3a;
-    background-clip: padding-box;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    opacity: .5;
-    transition: opacity .3s ease;
-}
-
+    .carousel-indicators li {
+        box-sizing: content-box;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        width: 30px;
+        height: 3px;
+        margin-right: 3px;
+        margin-left: 3px;
+        text-indent: -999px;
+        cursor: pointer;
+        background-color:  #959d3a;
+        background-clip: padding-box;
+        border-top: 10px solid transparent;
+        border-bottom: 10px solid transparent;
+        opacity: .5;
+        transition: opacity .3s ease;
+    }
+    /*************************ENDcarousel css*******************************************/
 
 

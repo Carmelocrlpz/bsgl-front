@@ -15,8 +15,8 @@ window.addEventListener('scroll', function()  {
 });
 
 $( document ).ready(function() {
-    $("#secondary-container").addClass( "visible" );
-    $("#container-video").addClass( "visible" );
+
+
 
     $(window).scroll(function(){
         var barra = $(window).scrollTop();
@@ -30,59 +30,19 @@ $( document ).ready(function() {
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
+
 $('.carousel').carousel({
   interval: 3000
 
 });
 
+
+
 });
 
-
-
-/*const menuLinks = document.querySelectorAll('.navbar-nav a[href^="#"]');
-menuLinks.foreach(menuLink => {
-  menuLink.addEventListener("click", function(){
-    menu.classList.remove("");
-  });
-});
-*/
 
 /*
-$(function(){
-
-    var texto = "NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS";
-    maquina("slogan",texto,100);
-
-});
-
-
-function maquina(contenedor,texto,intervalo){
-   // Calculamos la longitud del texto
-   longitud = texto.length;
-   // Obtenemos referencia del div donde se va a alojar el texto.
-   tagHtml = document.getElementById(contenedor);
-   tagHtml.innerHTML="";
-   var i=0;
-   // Creamos el timer
-   timer = setInterval(function(){
-      // Vamos añadiendo letra por letra y la _ al final.
-      tagHtml.innerHTML = tagHtml.innerHTML.substr(0,tagHtml.innerHTML.length-1) + texto.charAt(i) + "_";
-      // Si hemos llegado al final del texto..
-      if(i >= longitud){
-         // Salimos del Timer y quitamos la barra baja (_)
-         clearInterval(timer);
-         tagHtml.innerHTML = tagHtml.innerHTML.substr(0,longitud);
-
-         maquina("slogan",texto,100);
-         return true;
-      } else {
-         // En caso contrario.. seguimos
-         i++;
-      }
-   },intervalo);
-};*/
-
-
+THIS WAS MIGRATED TO COMPONENT:TS
 function escribirEnPantalla(texto){
   let arr=texto.split("");
   
@@ -107,13 +67,30 @@ function escribirEnPantalla(texto){
 escribirEnPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
 
 
-    var inputs = document.getElementsByClassName('formulario__input');
-    for (var i = 0; i < inputs.length; i++) {
-      inputs[i].addEventListener('keyup', function(){
-        if(this.value.length>=1) {
-          this.nextElementSibling.classList.add('fijar');
-        } else {
-          this.nextElementSibling.classList.remove('fijar');
-        }
-      });
+   */
+
+
+/************************************************************************************************/
+       
+/***********************************************************************************************/
+    /*function changemenu(){
+      let mimenunav = document.getElementById('navigationbar');
+    if (screen.width < 500){ 
+          mimenunav.classList.remove('sticky-top');
+          mimenunav.classList.remove('nav-top');
+          mimenunav.classList.add('fixed-bottom');
+       }else{ 
+          mimenunav.classList.remove('fixed-bottom');
+          mimenunav.classList.add('nav-top');
+          mimenunav.classList.add('sticky-top');
+      }
     }
+
+    changemenu();
+
+
+    THIS WAS MIGRATED TO COMPONENT:TS*/
+
+
+
+
