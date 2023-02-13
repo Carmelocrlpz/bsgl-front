@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
+import { TableModule } from 'primeng/table';
+
 
 import { AppComponent } from './app.component';
-
-import { TableModule } from 'primeng/table';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
@@ -13,6 +13,10 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ConsultoriaComponent } from './consultoria/consultoria.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
+import { ModalComponent } from './modal/modal.component';
+
+import { MatDialogModule } from '@angular/material/dialog';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -24,12 +28,15 @@ import { NosotrosComponent } from './nosotros/nosotros.component';
     ServiciosComponent,
     ConsultoriaComponent,
     ContactoComponent,
-    NosotrosComponent
+    NosotrosComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
     TableModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatDialogModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
