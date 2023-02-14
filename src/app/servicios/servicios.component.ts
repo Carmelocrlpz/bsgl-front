@@ -18,8 +18,8 @@ export class ServiciosComponent implements OnInit{
     this.data = data;
   }
 
-  showModal() {
-    const dialogRef = this.dialog.open(ModalComponent, { data: {titulo: "", descripcion: "" } });
+  showModal(value: number) {
+    const dialogRef = this.dialog.open(ModalComponent, {data: this.data[value]});
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         console.log("something here");

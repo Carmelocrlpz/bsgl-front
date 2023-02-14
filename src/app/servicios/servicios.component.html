@@ -3,18 +3,18 @@
     <br>
     <h3 class="scroll-content fadeAppear txt-center"><img class="subcategory" src="assets/img/PNG/small-logo2.png" alt="">SERVICIOS</h3>
     <div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 justify">
+      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+      <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-xl-8 justify">
         <p>Satisfaciendo las demandas del proceso y respetando a las personas que lo ejecutan, realizamos proyectos para mejorar la productividad, adecuando los proyectos a los estándares nacionales e internacionales.</p>
-			</div>
-			<div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
-		</div>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 col-xl-2"></div>
+    </div>
     <br>
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mrgbot"></div>
       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5  mrgbot">
-        <div class="card services-card" (click)="showModal()">
-          <img src="assets/img/SVG/Optimizacion.svg" class="card-img-top" alt="..." data-toggle="modal">
+        <div class="card services-card" (click)="showModal(0)">
+          <img src="assets/img/SVG/Optimizacion.svg" class="card-img-top">
           <div class="card-body">
             <p class="card-text">Optimización</p>
           </div>
@@ -22,35 +22,35 @@
       </div>
 
       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5  mrgbot">
-        <div class="card services-card">
-          <img src="assets/img/SVG/Ergonomia.svg" class="card-img-top" alt="..." data-toggle="modal" data-target="#ergonomiaModal">
+        <div class="card services-card" (click)="showModal(1)">
+          <img src="assets/img/SVG/Ergonomia.svg" class="card-img-top">
           <div class="card-body">
             <p>Ajuste de Ergonomía</p>
           </div>
         </div>
       </div>
+
       <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mrgbot"></div>
       <div class="clear-fix"><br><br></div>
       <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mrgbot"></div>
       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5  mrgbot">
-        <div class="card services-card">
-          <img src="assets/img/SVG/sellos.svg" class="card-img-top" alt="..." data-toggle="modal" data-target="#sellosModal">
+        <div class="card services-card" (click)="showModal(2)">
+          <img src="assets/img/SVG/sellos.svg" class="card-img-top">
           <div class="card-body">
             <p class="card-text">Aplicación Sellos</p>
           </div>
         </div>
       </div>
 
-
-
       <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5  mrgbot">
-        <div class="card services-card">
-          <img src="assets/img/SVG/Optimizacion.svg" class="card-img-top" alt="..." data-toggle="modal" data-target="#mantenimientoModal">
+        <div class="card services-card" (click)="showModal(3)">
+          <img src="assets/img/SVG/Optimizacion.svg" class="card-img-top">
           <div class="card-body">
             <p class="card-text">Mantenimiento</p>
           </div>
         </div>
       </div>
+      
       <div class="col-xs-12 col-sm-12 col-md-1 col-lg-1 col-xl-1 mrgbot"></div>
       <br>
       <br>
@@ -58,90 +58,6 @@
       <br>
       <br>
     </div>
-
-
-    <div class="modal fade" id="optimizacionModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="card-title">Optimización</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="">Optimización de tiempo de ciclos de la celda de puertas delanteras.</p>
-            <p>Optimización de la programación ”trayectoria” de los robots alcanzando el tiempo de producción solicitada por el cliente manteniendo una calidad de producción sin paros.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="modal fade" id="ergonomiaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="card-title">Ajuste de Ergonomía</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="card-text">Servicio de optimización y ajuste de ergonomía en pinzas de soldadura manual.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-    <div class="modal fade" id="sellosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="card-title">Aplicación Sellos</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p class="card-text">Instalación de sistema de aplicación de sellos.</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-
-    <div class="modal fade" id="mantenimientoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="card-title">Mantenimiento</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Dosificadores aplicadores y bombas de aplicación.</p>
-            <p>Contrato de mantenimiento en sistemas de aplicación de adhesivos</p>
-            <p>Mantenimientos Easy & Full repair en los siguientes componentes;</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          </div>
-        </div>
-      </div>
-    </div>
     <br>
-
   </div>
 </section>
