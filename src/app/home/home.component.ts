@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
     this.escribirPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
-    setInterval(() => this.validar(), 8000);
+   setInterval(() => this.validar(), 8000);
+    
   }
 
   escribirPantalla(slo: string) {
@@ -40,13 +41,14 @@ export class HomeComponent implements OnInit {
   myStopFunction() { clearTimeout(this.myTimeout); }
 
   validar() {
-    let mielemento = this.slogan.nativeElement.innerHTML;
-    if (!mielemento) {
+    let mielemento = this.slogan.nativeElement;
+    if (mielemento.innerHTML === "NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS") {
+      mielemento.innerHTML="";
       this.escribirPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
-      this.myStopFunction();
-      this.myTimeout = setTimeout(() => this.repeticion(), 7800);
+      mielemento.innerHTML="";
+      
     } else {
-      this.slogan.nativeElement.innerHTML = "";
+      
     }
   }
 
@@ -60,3 +62,5 @@ export class HomeComponent implements OnInit {
 
 
 }
+
+
