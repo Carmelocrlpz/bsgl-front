@@ -25,16 +25,105 @@ $( document ).ready(function() {
         $('body').css({
           'background-position': '0 ' + posicion + 'px'
         });
+
+
+        var Scroll = $(window).scrollTop() +250, 
+            SectionOneOffset = $('#inicio').offset().top, 
+            SectionTwoOffset = $('#nosotros').offset().top; 
+            SectionThreeOffset = $('#especialidades').offset().top; 
+            SectionFourOffset = $('#servicios').offset().top; 
+            SectionFiveOffset = $('#consultoria').offset().top; 
+            SectionSixOffset = $('#contacto').offset().top; 
+
+        if (Scroll >= SectionOneOffset) { 
+            $(".menu-item-6").removeClass("current-menu-item");
+            $(".menu-item-5").removeClass("current-menu-item"); 
+            $(".menu-item-4").removeClass("current-menu-item"); 
+            $(".menu-item-3").removeClass("current-menu-item"); 
+            $(".menu-item-2").removeClass("current-menu-item");
+            $(".menu-item-1").addClass("current-menu-item"); 
+        } else { 
+            $(".menu-item-1").removeClass("current-menu-item"); 
+        }
+
+        if (Scroll >= SectionTwoOffset) { 
+          $(".menu-item-6").removeClass("current-menu-item");
+          $(".menu-item-5").removeClass("current-menu-item"); 
+          $(".menu-item-4").removeClass("current-menu-item"); 
+          $(".menu-item-3").removeClass("current-menu-item"); 
+          $(".menu-item-2").addClass("current-menu-item"); 
+          $(".menu-item-1").removeClass("current-menu-item"); 
+        } else { 
+            $(".menu-item-2").removeClass("current-menu-item"); 
+        }
+
+
+        if (Scroll >= SectionThreeOffset) { 
+          $(".menu-item-6").removeClass("current-menu-item");
+          $(".menu-item-5").removeClass("current-menu-item"); 
+          $(".menu-item-4").removeClass("current-menu-item"); 
+          $(".menu-item-3").addClass("current-menu-item"); 
+          $(".menu-item-2").removeClass("current-menu-item");
+          $(".menu-item-1").removeClass("current-menu-item"); 
+
+        } else { 
+            $(".menu-item-3").removeClass("current-menu-item"); 
+            
+        }
+
+        if (Scroll >= SectionFourOffset) { 
+          $(".menu-item-6").removeClass("current-menu-item");
+          $(".menu-item-5").removeClass("current-menu-item"); 
+          $(".menu-item-4").addClass("current-menu-item"); 
+          $(".menu-item-3").removeClass("current-menu-item"); 
+          $(".menu-item-2").removeClass("current-menu-item");
+          $(".menu-item-1").removeClass("current-menu-item"); 
+
+        } else { 
+            $(".menu-item-4").removeClass("current-menu-item"); 
+            
+        }
+
+        if (Scroll >= SectionFiveOffset) { 
+          $(".menu-item-6").removeClass("current-menu-item");
+          $(".menu-item-5").addClass("current-menu-item"); 
+          $(".menu-item-4").removeClass("current-menu-item");
+          $(".menu-item-3").removeClass("current-menu-item"); 
+          $(".menu-item-2").removeClass("current-menu-item");
+          $(".menu-item-1").removeClass("current-menu-item"); 
+
+        } else { 
+            $(".menu-item-5").removeClass("current-menu-item"); 
+            
+        }
+
+        if (Scroll >= SectionSixOffset) { 
+            $(".menu-item-6").addClass("current-menu-item"); 
+            $(".menu-item-5").removeClass("current-menu-item"); 
+            $(".menu-item-4").removeClass("current-menu-item"); 
+            $(".menu-item-3").removeClass("current-menu-item"); 
+            $(".menu-item-2").removeClass("current-menu-item");
+            $(".menu-item-1").removeClass("current-menu-item"); 
+
+        } else { 
+            $(".menu-item-6").removeClass("current-menu-item"); 
+            
+        }
+
+
+
+
+
+
+
       });
+
+
+
 
     $('.navbar-nav>li>a').on('click', function(){
         $('.navbar-collapse').collapse('hide');
     });
-
-$('.carousel').carousel({
-  interval: 3000
-
-});
 
 
 
@@ -90,7 +179,4 @@ escribirEnPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR 
 
 
     THIS WAS MIGRATED TO COMPONENT:TS*/
-
-
-
 
