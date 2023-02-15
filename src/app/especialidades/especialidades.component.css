@@ -8,28 +8,7 @@
 
     .card-img-top{
       position: relative;
-      width: 70%;
-      height: 70%;
-      left: 15%;
+      width: 100%;
+      height: 100%;
+      /* left: 15%; */
     }
-
-
-
-
-/* .especialidades-card {
-      background-color: #FFFFFF !important;
-      transition:all 200ms ease;
-      background-image: linear-gradient(100deg, #b4bc7a 50%, #FFFFFF 50%);
-      -webkit-transition: background-position .66667s cubic-bezier(.24,.22,.31,1.07);
-      transition: background-position .66667s cubic-bezier(.24,.22,.31,1.07);
-      background-size: 214% 100%;
-      background-position:right bottom;
-    }
-
-    .especialidades-card:hover, .especialidades-card:focus {
-      background-color: #b4bc7a !important;
-      box-shadow: none;
-      color: #FFFFFF;
-      background-position:left bottom;
-      cursor: pointer;
-    }*/
