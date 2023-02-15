@@ -157,7 +157,7 @@
         background-position:left bottom;
         cursor: pointer;
     }
-
+/*
     .services-card {
       background-color: #FFFFFF !important;
       transition:all 200ms ease;
@@ -174,7 +174,7 @@
       color: #FFFFFF;
       background-position:left bottom;
       cursor: pointer;
-    }
+    }*/
 
     .justify {
       text-align: justify;
@@ -223,3 +223,9 @@
         margin-bottom: 10px;
       }
     }
+
+
+
+
+
+
