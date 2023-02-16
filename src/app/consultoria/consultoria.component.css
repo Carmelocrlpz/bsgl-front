@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+
+#consultoria{
+	  opacity: 0.9;
+	  background-attachment: fixed;
+	  background-position: center;
+	  background-repeat: no-repeat;
+	  background-size: cover;
+	background-image: url("../../assets/img/JPG/ib1.jpg");
+	  min-height: 100%;	
+	  transition: all 1s;
+
+
+}
+
+
+#consultoria h5{
+		  color: #ffffff;
+		  font-size: 1.8em;
+	  font-weight: 800;
+	  margin-bottom: 16px;
+	  margin-left: 2.2em;
+}
+
+
+#consultoria p{
+		  color: #ffffff;
+		  margin-left: 4em;
+		  text-align: justify;
+	  
+}
+
+
+
+.maskconsultoria{
+  background-color: rgba(0,0,0,0.70);
+  min-height: 100%;
+}
+
+#consultoria{padding: 0}
+
+
