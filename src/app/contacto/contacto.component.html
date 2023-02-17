@@ -5,29 +5,65 @@
         <h2 class="scroll-content fadeAppear  text-center"><img class="subcategory" src="assets/img/PNG/small-logo2.png" alt="">Contáctanos</h2><br>
         <div class="row ">
           <div class="col-md-6">
-            <form [formGroup]="contactForm">
+            <form #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+              <div class="form-group">
+                <label for="name" class="form-control-label">Nombre completo:
+                  <input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="contacto.name" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required="required"> 
+                  <small *ngIf="!name.valid && name.touched" class="invalid-feedback d-block">El nombre no es valido</small>
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="email" class="form-control-label">Correo electronico:
+                  <input type="email" name="email" class="form-control" #email="ngModel" [(ngModel)]="contacto.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required>
+                  <small *ngIf="!email.valid && email.touched" class="invalid-feedback d-block" >El correo no es valido</small>
+                </label>
+              </div>      
+              <div class="form-group">
+                <label for="telefono" class="form-control-label">telefono:
+                  <input type="tel" name="telefono" class="form-control" #telefono="ngModel" [(ngModel)]="contacto.telefono" required>
+                  <small *ngIf="!telefono.valid && telefono.touched" class="invalid-feedback d-block">Formato de telefono invalido</small>
+                </label>
+              </div>
+              <div class="form-group">
+                <label for="mensaje" class="form-control-label">Confirmacion de contraseña:
+                  <textarea name="mensaje" class="form-control" #mensaje="ngModel" [(ngModel)]="contacto.mensaje" ></textarea>
+                  <small *ngIf="!mensaje.valid && mensaje.touched" class="invalid-feedback d-block">Rellena este campo</small>
+                </label>
+              </div>
+              <input type="submit" value="Registrar" class="btn btn-primary" [disabled]="registerForm.invalid">
+            </form>
+           <!-- <form  #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
               <div class="form-group">
                 <label for="name">Nombre</label>
-                <input type="text" class="form-control" id="name" formControlName="name">
+                <input type="text" class="form-control" id="name"  #name="ngModel" [(ngModel)]="contacto.name" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{2,48}" required="required">
+                <small *ngIf="!name.valid && name.touched" class="invalid-feedback d-block">El nombre no es valido</small>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" formControlName="email">
+                <input type="email" class="form-control" id="email"  name="email" #email="ngModel" [(ngModel)]="contacto.email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required><small *ngIf="!email.valid && email.touched" class="invalid-feedback d-block" >El correo no es valido</small>
               </div>
               <div class="form-group">
-                <label for="email">Télefono</label>
-                <input type="email" class="form-control" id="email" formControlName="email">
+                <label for="telefono">Télefono</label>
+                <input type="tel"  name="telefono" class="form-control" #telefono="ngModel" [(ngModel)]="contacto.telefono" required >
+                <small *ngIf="!telefono.valid && telefono.touched" class="invalid-feedback d-block">Formato de telefono invalido</small>
               </div>
               <div class="form-group">
                 <label for="message">Mensaje</label>
-                <textarea class="form-control" id="message" rows="3" formControlName="message"></textarea>
+                <textarea class="form-control" id="message" rows="3"  name="mensaje" #mensaje="ngModel" [(ngModel)]="contacto.mensaje"></textarea><small *ngIf="!mensaje.valid && mensaje.touched" class="invalid-feedback d-block">Rellena este campo</small>
               </div>
               <div class="text-center">
-                <button [ngClass]="['btn-primary', 'color-green']" (click)="onSubmit()">Enviar</button>
+                //button [ngClass]="['btn-primary', 'color-green']" (click)="onSubmit()">Enviar</button>
+                <input type="submit" value="Enviar" class="btn btn-primary" [disabled]="registerForm.invalid">
               </div>
-            </form>
+            </form>-->
           </div>
           <div class="col-md-6">
+            <div *ngIf="status === 'error'" class="alert alert-danger" style="background-color: red;" >
+              <h3>{{status}}</h3>
+            </div>
+            <div *ngIf="status === 'success'" class="alert alert-success" style="background-color: green;">
+              <h4>{{mensaje2}}</h4>
+            </div>
             <img src="assets/img/SVG/Contact-us.svg" alt="contactanos" width="100%" height="100%">
           </div>
         </div>

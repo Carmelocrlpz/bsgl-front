@@ -17,6 +17,9 @@ import { ModalComponent } from './modal/modal.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 
 
 
@@ -38,7 +41,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TableModule,
     ReactiveFormsModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

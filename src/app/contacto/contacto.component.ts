@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Contacto } from '../models/contacto';
+import { ContactoService } from '../services/contacto.service';
 
 @Component({
   selector: 'app-contacto',
@@ -7,20 +8,47 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./contacto.component.css']
 })
 export class ContactoComponent {
+  public contacto: Contacto;
+  public status: string;
+  public mensaje: string;
+  public mensaje2: string;
 
-  contactForm: FormGroup;
+  
 
-    constructor(private formBuilder: FormBuilder) {
-      this.contactForm = this.formBuilder.group({
-        name: ['', Validators.required],
-        email: ['', [Validators.required, Validators.email]],
-        telefono: ['', Validators.required],
-        message: ['', Validators.required]
-      });
+    constructor(private _contactoService: ContactoService) {
+      
+
+      this.contacto = new Contacto('','','','');
+      this.status = "";
+      this.mensaje ="";
+      this.mensaje2 ="";
     }
 
-    onSubmit() {
-    // implement the form submission logic here
+   
+
+  onSubmit(form:any){
+    this._contactoService.register(this.contacto).subscribe(
+      response => {
+
+        if(response.status === 'success'){
+          this.status = response.status;
+          this.mensaje = response.message;
+          this.mensaje2 = this.mensaje.toString();
+          
+          form.reset();
+          
+        }else{
+          this.status = 'error';
+            
+        }        
+      },
+      error => {
+        this.status = 'error';
+      }
+
+
+    );
   }
+
 
 }
