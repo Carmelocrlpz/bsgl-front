@@ -64,13 +64,23 @@
    background-color: #f4f4f4;
    min-height: 100%;
    transition: all 1s;
+
+   background-image: url("../../assets/img/JPG/ib2.jpg");
+
  }
 
  .maskespecialidades {
-   background-color: ##f4f4f4;
+   
    min-height: 100%;
  }
 
  #especialidades {
    padding: 0
  }
+
+
+
+#msk{
+  background-color: rgba(244,244,244, .7);
+}
+
