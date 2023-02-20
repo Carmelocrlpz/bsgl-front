@@ -10,7 +10,7 @@ import { data } from './services';
   styleUrls: ['./servicios.component.css']
 })
 
-export class ServiciosComponent implements OnInit{
+export class ServiciosComponent implements OnInit {
   public data: any;
   constructor(public dialog: MatDialog) { }
 
@@ -19,7 +19,11 @@ export class ServiciosComponent implements OnInit{
   }
 
   showModal(value: number) {
-    const dialogRef = this.dialog.open(ModalComponent, {data: this.data[value]});
+    const dialogRef = this.dialog.open(ModalComponent, {
+      data: this.data[value],
+      height: "250px",
+      width: "600px"
+    });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         console.log("something here");

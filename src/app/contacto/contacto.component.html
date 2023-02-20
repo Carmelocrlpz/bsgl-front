@@ -5,25 +5,42 @@
         <h2 class="scroll-content fadeAppear  text-center"><img class="subcategory" src="assets/img/PNG/small-logo2.png" alt="">Contáctanos</h2><br>
         <div class="row ">
           <div class="col-md-6">
-            <form [formGroup]="contactForm">
-              <div class="form-group">
+
+            <form [formGroup]="contactForm" class="contact-form">
+              <div class="form-group" [ngClass]="contactForm.controls.name.invalid && ( contactForm.controls.name.touched || this.submitted ) ? 'danger' : '' " >
                 <label for="name">Nombre</label>
                 <input type="text" class="form-control" id="name" formControlName="name">
+                <small *ngIf="(contactForm.controls.name.hasError('pattern') || (contactForm.controls.name.invalid && this.submitted) ) ">
+                  <div class="error"></div>
+                  Solo se permiten letras, max 45 caracteres.
+                </small>
               </div>
-              <div class="form-group">
+              <div class="form-group" [ngClass]="contactForm.controls.email.invalid && ( contactForm.controls.email.touched || this.submitted ) ? 'danger' : '' ">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email" formControlName="email">
+                <small *ngIf="(contactForm.controls.email.hasError('pattern') || (contactForm.controls.email.invalid && this.submitted) ) ">
+                  <div class="error"></div>
+                  El correo ingresado no es válido.
+                </small>
               </div>
-              <div class="form-group">
-                <label for="email">Télefono</label>
-                <input type="email" class="form-control" id="email" formControlName="email">
+              <div class="form-group" [ngClass]="contactForm.controls.telefono.invalid && ( contactForm.controls.telefono.touched || this.submitted ) ? 'danger' : '' ">
+                <label for="telefono">Télefono</label>
+                <input type="telefono" class="form-control" id="telefono" formControlName="telefono" maxlength="10">
+                <small *ngIf="(contactForm.controls.telefono.hasError('pattern') || (contactForm.controls.telefono.invalid && this.submitted) ) ">
+                  <div class="error"></div>
+                  Solo se permiten números
+                </small>
               </div>
-              <div class="form-group">
-                <label for="message">Mensaje</label>
-                <textarea class="form-control" id="message" rows="3" formControlName="message"></textarea>
+              <div class="form-group" [ngClass]="contactForm.controls.mensaje.invalid && ( contactForm.controls.mensaje.touched || this.submitted ) ? 'danger' : '' ">
+                <label for="mensaje">Mensaje</label>
+                <textarea class="form-control" id="mensaje" rows="3" formControlName="mensaje" maxlength="500"></textarea>
+                <small *ngIf="(contactForm.controls.mensaje.hasError('pattern') || (contactForm.controls.mensaje.invalid && this.submitted) ) ">
+                  <div class="error"></div>
+                  Solo texto no mayor a 500 caracteres
+                </small>
               </div>
               <div class="text-center">
-                <button [ngClass]="['btn-primary', 'color-green']" (click)="onSubmit()">Enviar</button>
+                <button class="btn-primary" (click)="onSubmit()">Enviar</button>
               </div>
             </form>
           </div>

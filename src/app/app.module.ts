@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
 
 
@@ -17,6 +17,9 @@ import { ModalComponent } from './modal/modal.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { ConfirmComponent } from './confirm/confirm.component';
+
 
 
 
@@ -31,14 +34,17 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ConsultoriaComponent,
     ContactoComponent,
     NosotrosComponent,
-    ModalComponent
+    ModalComponent,
+    ConfirmComponent
   ],
   imports: [
     BrowserModule,
     TableModule,
     ReactiveFormsModule,
     MatDialogModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
