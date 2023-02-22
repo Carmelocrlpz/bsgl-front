@@ -1,8 +1,10 @@
 <h3 class="txt-center txt-modal-servicios">{{data.titulo}}</h3>
 <mat-dialog-content class="mat-typography">
-  <div>
-    <p>{{data.mensaje}}</p>
-  </div>
+  <ng-container>
+    <p>{{data.p1}}</p>
+    <p>{{data.p2}}</p>
+    <p>{{data.p3}}</p>
+  </ng-container>
 </mat-dialog-content>
 <div class="bottomButtons" align="end">
   <button class="btn-primary btn-cl" [mat-dialog-close]="true">Cerrar</button>

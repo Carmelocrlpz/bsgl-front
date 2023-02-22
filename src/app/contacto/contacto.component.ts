@@ -27,23 +27,35 @@ export class ContactoComponent {
 
   onSubmit() {
     console.log(this.contactForm);
+    if(
+      this.contactForm.value.name == '' ||
+      this.contactForm.value.email == '' ||
+      this.contactForm.value.telefono == '' ||
+      this.contactForm.value.mensaje == '') {
+        this.openModal("Mensaje","favor de llenar todos los campos");
+        return;
+    }
 
     this.contactoService.register(this.contactForm.value).subscribe(
     response => {
       console.log(response);
       if(response.code == 200){
-        this.confirm();
+        this.openModal("Confirmación","El correo fue enviado exitosamente.");
         this.contactForm.reset();
       }
     },
     error => {
-      //this.status = 'error';
+    this.openModal("Ups...","Tenemos problemas al enviar el correo, favor de intentar nuevamente");
     });
   }
 
 
-  confirm() {
+  openModal(titulo: string, mensaje: string) {
     const dialogRef = this.dialog.open(ConfirmComponent, {
+      data: {
+        titulo: titulo,
+        mensaje: mensaje
+      },
       height: "250px",
       width: "300px"
     });

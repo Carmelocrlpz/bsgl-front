@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { ModalComponent } from '../modal/modal.component';
+import { ModalEspecialidadesComponent } from '../modal-especialidades/modal-especialidades.component';
 import { data } from './dataEspecialidades';
 
 @Component({
@@ -18,7 +18,11 @@ export class EspecialidadesComponent implements OnInit{
   }
 
   showModal(value: number) {
-    const dialogRef = this.dialog.open(ModalComponent, {data: this.data[value]});
+    const dialogRef = this.dialog.open(ModalEspecialidadesComponent, {
+      data: this.data[value],
+      height: "280px",
+      width: "600px"
+    });
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         console.log("something here");

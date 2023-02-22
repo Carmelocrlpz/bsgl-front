@@ -13,12 +13,13 @@ import { ServiciosComponent } from './servicios/servicios.component';
 import { ConsultoriaComponent } from './consultoria/consultoria.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
-import { ModalComponent } from './modal/modal.component';
 
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { ConfirmComponent } from './confirm/confirm.component';
+import { ModalServiciosComponent } from './modal-servicios/modal-servicios.component';
+import { ModalEspecialidadesComponent } from './modal-especialidades/modal-especialidades.component';
 
 
 
@@ -34,8 +35,9 @@ import { ConfirmComponent } from './confirm/confirm.component';
     ConsultoriaComponent,
     ContactoComponent,
     NosotrosComponent,
-    ModalComponent,
-    ConfirmComponent
+    ConfirmComponent,
+    ModalServiciosComponent,
+    ModalEspecialidadesComponent
   ],
   imports: [
     BrowserModule,
