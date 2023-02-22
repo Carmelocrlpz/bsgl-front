@@ -26,7 +26,6 @@ export class ContactoComponent {
   }
 
   onSubmit() {
-    console.log(this.contactForm);
     if(
       this.contactForm.value.name == '' ||
       this.contactForm.value.email == '' ||
@@ -38,7 +37,6 @@ export class ContactoComponent {
 
     this.contactoService.register(this.contactForm.value).subscribe(
     response => {
-      console.log(response);
       if(response.code == 200){
         this.openModal("Confirmación","El correo fue enviado exitosamente.");
         this.contactForm.reset();
@@ -57,12 +55,10 @@ export class ContactoComponent {
         mensaje: mensaje
       },
       height: "250px",
-      width: "300px"
+      width: "400px"
     });
     dialogRef.afterClosed().subscribe(result => {
-      if (result) {
-        console.log("something here");
-      }
+      if (result) {}
     });
   }
 }
