@@ -1,3 +1,3 @@
 export var global = {
-	url: 'https://bsgl.mx/bsgl-back/public/api/'
+	url: 'http://api.bsgl.mx/api/'
 }

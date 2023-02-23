@@ -1,0 +1,31 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" [routerLink]="['/panel']"><img src="assets/img/logo/logo.png" alt="BSGL México"></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+		<a class="nav-link " aria-current="page" [routerLink]="['/panel']">Inicio</a>
+      </li>
+      <ul class="navbar-nav navbar-right mb-2 mb-lg-0" *ngIf="identity.name == null">
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" [routerLink]="['/login']">Login</a>
+        </li>
+      </ul>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+           {{identity.name}}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+         <a class="dropdown-item" [routerLink]="['/logout/1']">Cerrar sesion</a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<router-outlet></router-outlet>

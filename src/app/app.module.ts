@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { routing, appRoutingProviders } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
@@ -14,12 +15,17 @@ import { ConsultoriaComponent } from './consultoria/consultoria.component';
 import { ContactoComponent } from './contacto/contacto.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 
+
 import { MatDialogModule } from '@angular/material/dialog';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule, HttpHeaders } from '@angular/common/http';
 import { ConfirmComponent } from './confirm/confirm.component';
 import { ModalServiciosComponent } from './modal-servicios/modal-servicios.component';
 import { ModalEspecialidadesComponent } from './modal-especialidades/modal-especialidades.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { PanelComponent } from './components/panel/panel.component';
+import { ErrorComponent } from './components/error/error.component';
 
 
 
@@ -37,7 +43,11 @@ import { ModalEspecialidadesComponent } from './modal-especialidades/modal-espec
     NosotrosComponent,
     ConfirmComponent,
     ModalServiciosComponent,
-    ModalEspecialidadesComponent
+    ModalEspecialidadesComponent,
+    LoginComponent,
+    RegisterComponent,
+    PanelComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
@@ -46,9 +56,12 @@ import { ModalEspecialidadesComponent } from './modal-especialidades/modal-espec
     MatDialogModule,
     BrowserAnimationsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    routing
   ],
-  providers: [],
+  providers: [
+    appRoutingProviders
+    ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
