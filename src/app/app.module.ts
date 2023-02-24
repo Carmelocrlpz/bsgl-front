@@ -26,6 +26,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PanelComponent } from './components/panel/panel.component';
 import { ErrorComponent } from './components/error/error.component';
+import { PasswordResetComponent } from './components/password-reset/password-reset.component';
 
 
 
@@ -47,7 +48,8 @@ import { ErrorComponent } from './components/error/error.component';
     LoginComponent,
     RegisterComponent,
     PanelComponent,
-    ErrorComponent
+    ErrorComponent,
+    PasswordResetComponent
   ],
   imports: [
     BrowserModule,
