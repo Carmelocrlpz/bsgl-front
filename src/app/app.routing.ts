@@ -16,6 +16,7 @@ import { ContactoComponent } from './contacto/contacto.component';
 import { FooterComponent } from './footer/footer.component';*/
 import { PanelComponent } from './components/panel/panel.component';
 import { PasswordResetComponent } from './components/password-reset/password-reset.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { ErrorComponent } from './components/error/error.component';
 
 //definir rutas
@@ -24,6 +25,7 @@ const appRoutes: Routes = [
 	{ path: 'login', component: LoginComponent },
 	{ path: 'logout/:sure', component: LoginComponent },
 	{ path: 'password-reset', component: PasswordResetComponent },
+	{ path: 'forgot-password', component: ForgotPasswordComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: 'panel', component: PanelComponent },
 	{ path: '**', component: ErrorComponent }
