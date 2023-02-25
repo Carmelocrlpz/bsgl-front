@@ -1,3 +1,3 @@
 export var global = {
-	url: 'http://api.bsgl.mx/api/'
+	url: 'https://bsgl.mx/api/api/'
 }

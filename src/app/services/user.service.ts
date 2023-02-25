@@ -27,7 +27,9 @@ export class UserService {
     let json = JSON.stringify(user);
     let params = 'json='+json;
     let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
-    return this._http.post(this.url+'register', params, {headers:headers, withCredentials: false});
+    return this._http.post(this.url+'register', params, {headers:headers});
+    ////return this._http.post(this.url+'register', params, {headers:headers, withCredentials: false});
+
   }
 
 
@@ -39,7 +41,7 @@ export class UserService {
     let params = 'json='+json;
     let headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded');
 
-  return this._http.post(this.url+'login', params, {headers:headers, withCredentials: false });
+  return this._http.post(this.url+'login', params, {headers:headers });
   }
 
 
