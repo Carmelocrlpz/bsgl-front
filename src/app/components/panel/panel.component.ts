@@ -19,7 +19,7 @@ export class PanelComponent {
   }
 
   ngOnInit(){
-    console.log('Webapp cargada correctenete');
+    
   }
 
   ngDoCheck(){

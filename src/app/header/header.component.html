@@ -25,7 +25,21 @@
             <a class="nav-link menu-item-6" href="#contacto" >Contacto </a>
           </li>
         </ul>
+         <div *ngIf="identity.name != null">
+           <li  class="nav-item dropdown">
+             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{identity.name}}
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" [routerLink]="['/panel']">Panel</a> 
+              <a *ngIf="identity.role=='ROLE_ADMIN'" class="dropdown-item" [routerLink]="['/register']">Registrar usuario</a> 
+              <a class="dropdown-item" [routerLink]="['/logout/1']">Cerrar sesion</a>
+            </div>
+          </li>
+        </div>
       </div>
   </nav>
+
+
 
   

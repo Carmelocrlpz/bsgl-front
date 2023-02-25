@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, DoCheck } from '@angular/core';
 import { User } from '../../models/user';
 import { UserService } from '../../services/user.service';
 
@@ -9,6 +9,8 @@ import { UserService } from '../../services/user.service';
   providers: [UserService]
 })
 export class RegisterComponent {
+    public identity:any;
+  public token:any;
   public page_title: string;
   public user: User;
   public status: string;
@@ -21,7 +23,7 @@ export class RegisterComponent {
   constructor(
     private _userService: UserService
   ){
-      this.page_title='Registrate';
+      this.page_title='Registra a un usuario';
       this.user = new User(0,'','','','');
       this.status = "";
       this.erroresv = "";
@@ -29,6 +31,7 @@ export class RegisterComponent {
       this.erroremail = "";
       this.errorpassword = "";
       this.errorpassword_confirmation = "";
+      this.loadUser();
     }
 
   onSubmit(form:any){
@@ -37,15 +40,15 @@ export class RegisterComponent {
         if(response.status == "succes"){
           this.status = response.status;
           form.reset();
-          console.log(response.status);
+          
         }else{
             this.status = 'error1';
         }        
       },
       error => {
         this.status = 'error';
-        console.log(<any>error);
-        console.log(error.message);
+        
+        
         this.errorname= error.error.errors.name;
         this.erroremail = error.error.errors.email;
         this.errorpassword = error.error.errors.password;
@@ -54,5 +57,16 @@ export class RegisterComponent {
       }
     );
   }
+
+
+   ngDoCheck(){
+   this.loadUser();
+   }
+
+    loadUser(){
+    this.identity = this._userService.getIdentity();
+    this.token = this._userService.getToken();
+  }
+
 
 }

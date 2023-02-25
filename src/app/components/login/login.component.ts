@@ -46,8 +46,8 @@ export class LoginComponent {
                  response => {
                      
                      this.identity = response;  
-                     console.log(this.token);
-                     console.log(this.identity);
+                     
+                     
                      // crear sesion datos de usuario identificado                   
                      localStorage.setItem('token', this.token);
                      localStorage.setItem('identity', JSON.stringify(this.identity));
@@ -55,22 +55,22 @@ export class LoginComponent {
                  },
                  error => {
                    this.status = 'error';
-                   console.log(<any>error);
+                   
                  }
              );
 
            }else{
               this.status = 'error';
-              console.log("status response: ");
-              console.log(response);
+              
+              
               this.messageError = response.message;
-         //console.log(error.message);
+         //
            }
-           //console.log(response);
+           //
          },
          error => {
            this.status = 'error';
-           console.log(<any>error);
+           
          }
      );
    }

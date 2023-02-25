@@ -12,7 +12,7 @@ export class ModalServiciosComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public data: any) { }
 
   ngOnInit() {
-  //  console.log(this.data);
+  //  
   }
 
 }

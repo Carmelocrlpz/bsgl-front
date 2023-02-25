@@ -1,29 +1,34 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild  } from '@angular/core';
-
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, DoCheck  } from '@angular/core';
+import { UserService } from '../services/user.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  providers: [UserService]
 })
 export class HeaderComponent implements OnInit{
+    public identity:any;
+  public token:any;
 
   @ViewChild('navigationbar') navigationbar!: ElementRef;
   public getScreenWidth!:any;
 
-  constructor( private renderer2: Renderer2){
-
+  constructor( private renderer2: Renderer2, public _userService: UserService){
+  this.loadUser();
   }
 
 
   
 
   ngOnInit(){
-    this.getScreenWidth = window.innerWidth;
+    //this.getScreenWidth = window.innerWidth;
     
   }
 
   ngAfterViewInit() {
     this.cambiarMenuMovil();
+    this.loadUser();
+    console.log( this.identity);
       
   }
 
@@ -46,6 +51,17 @@ export class HeaderComponent implements OnInit{
 
       }
    }
+
+   ngDoCheck(){
+   this.loadUser();
+   }
+
+    loadUser(){
+    this.identity = this._userService.getIdentity();
+    this.token = this._userService.getToken();
+  }
+
+
 
 
 

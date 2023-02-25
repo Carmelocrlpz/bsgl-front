@@ -75,3 +75,10 @@
   transition: all 2s; 
   
 }
+
+
+
+.dropdown{
+    text-decoration: none;
+    list-style: none;
+}

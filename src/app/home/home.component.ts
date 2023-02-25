@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
 
   ngAfterViewInit() {
     this.escribirPantalla("NUESTRO OBJETIVO ES BRINDAR LA TECNOLOGÍA PARA AUTOMATIZAR SUS PROCESOS");
-   setInterval(() => this.validar(), 8000);
+  // setInterval(() => this.validar(), 8000);
     
   }
 
