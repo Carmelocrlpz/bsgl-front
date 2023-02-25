@@ -28,6 +28,8 @@ import { PanelComponent } from './components/panel/panel.component';
 import { ErrorComponent } from './components/error/error.component';
 import { PasswordResetComponent } from './components/password-reset/password-reset.component';
 import { MailsComponent } from './components/mails/mails.component';
+import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
+
 
 
 
@@ -51,7 +53,8 @@ import { MailsComponent } from './components/mails/mails.component';
     PanelComponent,
     ErrorComponent,
     PasswordResetComponent,
-    MailsComponent
+    MailsComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
