@@ -32,4 +32,4 @@ const appRoutes: Routes = [
 ];
 //exportarr configuracion
 export const appRoutingProviders: any[] = [];
-export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes);
+export const routing: ModuleWithProviders<any> = RouterModule.forRoot(appRoutes,{ useHash: true });
