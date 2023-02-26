@@ -1,6 +1,6 @@
 export class Correos {
    constructor(
-       public id: string,
+       public id: number,
        public name: string,
        public email: string,
        public telefono: string,

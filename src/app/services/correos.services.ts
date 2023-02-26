@@ -12,11 +12,23 @@ import { global } from './global';
 export class CorreosService {
   public url: string;
 
-  constructor(public _http: HttpClient, private _userService: UserService) { this.url = global.url; }
+  constructor(private _http: HttpClient,private _userService: UserService) { this.url = global.url; }
 
-  public getCorreos() {
+  /*public getCorreos() {
     let headers = new HttpHeaders().set('Authorization', this._userService.getToken());
     return this._http.get(`${this.url}contacto-data`, { headers: headers });
-  }
+  }*/
 
+ getCorreos():Observable<any>{
+  let headers = new HttpHeaders().set('Authorization',this._userService.getToken());
+  //headers.set('Authorization',this._userService.getIdentity());
+  //headers.set('Content-Type','application/x-www-form-urlencoded');
+  return this._http.get(this.url+'contacto-data', {headers:headers});
+ }
+
+
+/*
+headers.append('Authorization',this._userService.getIdentity());
+headers.append('Content-Type','application/x-www-form-urlencoded');
+*/
 }
