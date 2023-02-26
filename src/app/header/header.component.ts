@@ -1,71 +1,70 @@
-import { Component, ElementRef, OnInit, Renderer2, ViewChild, DoCheck  } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild, DoCheck } from '@angular/core';
 import { UserService } from '../services/user.service';
+import { Router } from '@angular/router';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   providers: [UserService]
 })
-export class HeaderComponent implements OnInit{
-    public identity:any;
-  public token:any;
+export class HeaderComponent implements OnInit {
+  public identity: any;
+  public token: any;
+
 
   @ViewChild('navigationbar') navigationbar!: ElementRef;
-  public getScreenWidth!:any;
+  public getScreenWidth!: any;
 
-  constructor( private renderer2: Renderer2, public _userService: UserService){
-  this.loadUser();
+  constructor(private router: Router, private renderer2: Renderer2, public _userService: UserService, ) {
+    this.loadUser();
   }
 
 
-  
 
-  ngOnInit(){
+
+  ngOnInit() {
     //this.getScreenWidth = window.innerWidth;
-    
   }
 
   ngAfterViewInit() {
     this.cambiarMenuMovil();
     this.loadUser();
-    console.log( this.identity);
-      
+    console.log(this.identity);
+
   }
 
-  addMyClass(){
-     //this.myButton.nativeElement.classList.add("my-class"); //BAD PRACTICE
-     this.renderer2.addClass(this.navigationbar.nativeElement, "fixed-bottom");
-   }
+  addMyClass() {
+    //this.myButton.nativeElement.classList.add("my-class"); //BAD PRACTICE
+    this.renderer2.addClass(this.navigationbar.nativeElement, "fixed-bottom");
+  }
 
-   removeMyClass(){
-     //this.navigationbar.nativeElement.classList.remove("my-class"); //BAD PRACTICE
-     this.renderer2.removeClass(this.navigationbar.nativeElement, "sticky-top");
-     this.renderer2.removeClass(this.navigationbar.nativeElement, "nav-top");
-   }
+  removeMyClass() {
+    //this.navigationbar.nativeElement.classList.remove("my-class"); //BAD PRACTICE
+    this.renderer2.removeClass(this.navigationbar.nativeElement, "sticky-top");
+    this.renderer2.removeClass(this.navigationbar.nativeElement, "nav-top");
+  }
 
-   cambiarMenuMovil(){
-      if(this.getScreenWidth < 500){
-        this.removeMyClass();
+  cambiarMenuMovil() {
+    if (this.getScreenWidth < 500) {
+      this.removeMyClass();
       this.addMyClass();
-      }else{
+    } else {
 
-      }
-   }
+    }
+  }
 
-   ngDoCheck(){
-   this.loadUser();
-   }
+  ngDoCheck() {
+    this.loadUser();
+  }
 
-    loadUser(){
+  loadUser() {
     this.identity = this._userService.getIdentity();
     this.token = this._userService.getToken();
   }
 
-
-
-
+  closeSession() {
+    this.router.navigate(['logout/1']);
+  }
 
 }
-
-
-

@@ -44,25 +44,24 @@ export class LoginComponent {
              //objeto de usuario identificado
              this._userService.signup(this.user, true).subscribe(
                  response => {
-                     
-                     this.identity = response;  
-                     
-                     
-                     // crear sesion datos de usuario identificado                   
+                      this.identity = response;
+
+
+                     // crear sesion datos de usuario identificado
                      localStorage.setItem('token', this.token);
                      localStorage.setItem('identity', JSON.stringify(this.identity));
                      this._router.navigate(['panel']);
                  },
                  error => {
                    this.status = 'error';
-                   
+
                  }
              );
 
            }else{
               this.status = 'error';
-              
-              
+
+
               this.messageError = response.message;
          //
            }
@@ -70,7 +69,7 @@ export class LoginComponent {
          },
          error => {
            this.status = 'error';
-           
+
          }
      );
    }

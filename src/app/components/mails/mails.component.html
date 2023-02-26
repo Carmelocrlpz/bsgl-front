@@ -1,16 +1,20 @@
 <div class="container">
   <div class="row">
-    <p-table [tableStyle]="{'min-width': '50rem'}">
+    <p-table [value]="data" [tableStyle]="{'min-width': '50rem'}">
         <ng-template pTemplate="header">
             <tr>
-                <th>Code</th>
-                <th>Name</th>
-                <th>Category</th>
-                <th>Quantity</th>
+                <th>No. Correo</th>
+                <th>Nombre</th>
+                <th>Correo</th>
+                <th>teléfono</th>
+                <th>mensaje</th>
+                <th>fecha recibido</th>
             </tr>
         </ng-template>
-        <ng-template pTemplate="body" >
+        <ng-template pTemplate="body" let-data>
             <tr>
+                <td>example</td>
+                <td>example</td>
                 <td>example</td>
                 <td>example</td>
                 <td>example</td>
