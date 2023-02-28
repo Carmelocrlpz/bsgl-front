@@ -3,6 +3,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TableModule } from 'primeng/table';
+import {ButtonModule} from 'primeng/button';
 
 
 import { AppComponent } from './app.component';
@@ -59,6 +60,7 @@ import { ForgotPasswordComponent } from './components/forgot-password/forgot-pas
   imports: [
     BrowserModule,
     TableModule,
+    ButtonModule,
     ReactiveFormsModule,
     MatDialogModule,
     BrowserAnimationsModule,

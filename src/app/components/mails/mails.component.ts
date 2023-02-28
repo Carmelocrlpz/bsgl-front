@@ -15,17 +15,20 @@ export class MailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this._correosService.getCorreos().subscribe(
-      response => {
-        if (response) {
-          this.response = response;
-          this.data = this.response.data;
-        }
+    console.log(localStorage);
+    if(localStorage.identity&&localStorage.token) {
+      this._correosService.loadStart();
+      this._correosService.getCorreos().subscribe(
+        response => {
+          if (response) {
+            this.response = response;
+            this.data = this.response.data;
+            this._correosService.loadEnd();
+          }
 
-      },
-      err => { }
-    );
-
-
+        },
+        err => { }
+      );
+    }
   }
 }

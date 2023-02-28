@@ -9,8 +9,17 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    a, p, li, ul, h1, h2, h3, h4, h5, label {
+    a, p, li, ul, h1, h2, h3, h4, h5, label, td, th {
       font-family: 'Montserrat', sans-serif;
+    }
+    th {
+      font-weight: 800 !important;
+      color: #000000 !important;
+    }
+
+    td {
+      font-weight: 400;
+      color: #000000 !important;
     }
 
     html {

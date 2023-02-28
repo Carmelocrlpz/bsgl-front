@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row">
-    <p-table [value]="data" [tableStyle]="{'min-width': '50rem'}">
+    <h3 class="txt-center">Correos Recibidos</h3>
+    <br><br>
+    <p-table [value]="data" style="height: 500px;" styleClass="p-datatable-lg" [tableStyle]="{'min-width': '50rem'}" [scrollable]="true" scrollHeight="400px">
         <ng-template pTemplate="header">
             <tr>
                 <th>No. Correo</th>
@@ -13,13 +15,19 @@
         </ng-template>
         <ng-template pTemplate="body" let-data>
             <tr>
-                <td>example</td>
-                <td>example</td>
-                <td>example</td>
-                <td>example</td>
-                <td>example</td>
-                <td>example</td>
+                <td>{{data.id}}</td>
+                <td>{{data.name}}</td>
+                <td>{{data.email}}</td>
+                <td>{{data.telefono}}</td>
+                <td>{{data.mensaje}}</td>
+                <td>{{data.created_at | date:'dd/MM/yy, h:mm a'}}</td>
             </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
         </ng-template>
     </p-table>
   </div>
