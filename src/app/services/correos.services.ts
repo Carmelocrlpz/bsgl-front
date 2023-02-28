@@ -15,14 +15,7 @@ import Swal from 'sweetalert2';
 export class CorreosService {
   public url: string;
 
-  // private imgLoad: Swal = Swal.mixin({
-  //     toast: false,
-  //     position: 'center',
-  //     showConfirmButton: false,
-  //     timerProgressBar: true
-  // });
-
-  constructor(public _http: HttpClient, private _userService: UserService) { this.url = global.url; }
+  constructor(private _http: HttpClient,private _userService: UserService) { this.url = global.url; }
 
   public getCorreos() {
     let headers = new HttpHeaders().set('Authorization', this._userService.getToken());

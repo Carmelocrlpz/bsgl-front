@@ -30,7 +30,7 @@ export class HeaderComponent implements OnInit {
   ngAfterViewInit() {
     this.cambiarMenuMovil();
     this.loadUser();
-    console.log(this.identity);
+    
 
   }
 
